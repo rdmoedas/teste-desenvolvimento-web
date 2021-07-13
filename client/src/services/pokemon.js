@@ -21,6 +21,19 @@ const pokemonService = {
             headers: { 'Content-Type': 'application/json' },
         };
         await fetch(`${API_URL}/${id}`, requestOptions);
+        return
+    },
+    putPokemons: async function putPokemons (
+        id,
+        name,
+        power
+    ) {
+        const requestOptions = {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+        };
+        await fetch(`${API_URL}/${id}`, requestOptions);
+        return
     }
 }
 
